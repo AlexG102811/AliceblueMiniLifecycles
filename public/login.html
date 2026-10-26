@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log In — Quiz App</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-container">
+    <section class="card auth-card" aria-labelledby="login-title">
+      <header class="auth-header">
+        <a href="/" class="brand">Quiz App</a>
+        <h1 id="login-title">Log In</h1>
+        <p class="auth-subtitle">Welcome back! Log in to keep playing.</p>
+      </header>
+
+      <form id="login-form" action="/api/auth/login" method="post" novalidate>
+        <div class="form-field">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" autocomplete="username"
+                 placeholder="Enter your username" required maxlength="50" />
+          <p class="field-error" id="username-error" hidden></p>
+        </div>
+
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="current-password"
+                 placeholder="Enter your password" required />
+          <p class="field-error" id="password-error" hidden></p>
+        </div>
+
+        <p class="alert" id="form-alert" role="alert" hidden></p>
+
+        <button type="submit" class="btn btn-primary btn-block" id="login-btn">
+          Log In
+        </button>
+      </form>
+
+      <footer class="auth-footer">
+        <p>New here? <a href="/register.html">Create an account</a></p>
+      </footer>
+    </section>
+  </main>
+
+  <script src="/js/login.js"></script>
+</body>
+</html>
